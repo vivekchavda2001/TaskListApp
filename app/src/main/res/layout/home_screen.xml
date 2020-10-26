@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context=".mHomeScreen">
     <TextView
+        android:id="@+id/task_msg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15dp"
@@ -16,6 +17,7 @@
 
         android:layout_margin="10dp"/>
     <androidx.cardview.widget.CardView
+        android:id="@+id/task_view"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         app:cardCornerRadius="10dp"

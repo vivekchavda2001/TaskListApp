@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.List;
@@ -28,6 +29,15 @@ public class mListTask extends AppCompatActivity {
     public void setDB() {
         myDatabase = Room.databaseBuilder(mListTask.this, myDatabase.class, "TaskDB")
                 .allowMainThreadQueries().build();
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+        overridePendingTransition(0, 0);
+        overridePendingTransition(0, 0);
+        Intent i = new Intent(mListTask.this,mHomeScreen.class);
+        startActivity(i);
     }
 
 }

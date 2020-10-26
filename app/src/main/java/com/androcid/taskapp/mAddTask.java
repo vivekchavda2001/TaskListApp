@@ -3,6 +3,7 @@ package com.androcid.taskapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -41,5 +42,19 @@ public class mAddTask extends AppCompatActivity {
                 .allowMainThreadQueries().build();
         database.dao().taskinsertion(task);
         Toast.makeText(this, "Task Added", Toast.LENGTH_SHORT).show();
+        finish();
+        overridePendingTransition(0, 0);
+        startActivity(getIntent());
+        overridePendingTransition(0, 0);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+        overridePendingTransition(0, 0);
+        overridePendingTransition(0, 0);
+        Intent i = new Intent(mAddTask.this,mHomeScreen.class);
+        startActivity(i);
     }
 }
