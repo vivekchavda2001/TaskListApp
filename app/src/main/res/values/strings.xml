@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TaskApp</string>
+    <string name="AddTask">Add Task</string>
+    <string name="Add">Add</string>
+    <string name="ListTask">List Of Task</string>
+    <string name="title">Enter Title</string>
+    <string name="task">Enter Task Description</string>
+    <string name="rcnt_tsk">Recent Task</string>
+</resources>
